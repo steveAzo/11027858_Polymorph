@@ -7,6 +7,8 @@ import { connectDb } from './helpers/database.js'
 
 await connectDb("mongoose:127.0.0")
 
+server.use("/patientModel")
+server.use('/encounterModel')
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
